@@ -3,11 +3,6 @@ import subprocess
 import os
 import re
 
-EXCEL_SUFFIX_LIST: list[str] = ['.xls"', '.xlsx"']
-WORD_SUFFIX_LIST: list[str] = ['.doc"', '.docx"']
-VSCODE_SUFFIX_LIST: list[str] = ['.md"', '.c"', '.txt"', '.json"', '.h"']
-
-
 def format_path(p: str) -> str:
     path: str = ""
     p = re.sub('"|^-', "", p)
@@ -28,20 +23,15 @@ def format_path(p: str) -> str:
 
 def open_path(path_formatted: str) -> None:
     path_suffix: str = os.path.splitext(path_formatted)[1]
-    if path_suffix in EXCEL_SUFFIX_LIST:
+    if "xls" in path_suffix:
         cmd: str = (
             r'"C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE" /x {}'.format(
                 path_formatted
             )
         )
         subprocess.Popen(cmd)
-    elif path_suffix in WORD_SUFFIX_LIST:
+    elif "doc" in path_suffix:
         cmd: str = r'"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE" /w {}'.format(
-            path_formatted
-        )
-        subprocess.Popen(cmd)
-    elif path_suffix in VSCODE_SUFFIX_LIST:
-        cmd: str = r'"C:\Program Files\Microsoft VS Code\Code.exe" {}'.format(
             path_formatted
         )
         subprocess.Popen(cmd)
