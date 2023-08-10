@@ -2,7 +2,6 @@ import pyperclip
 import subprocess
 import os
 import re
-import time
 
 def format_path(p: str) -> str:
     path: str = ""
@@ -50,5 +49,3 @@ for line in cb.splitlines():
             open_path(format_path(line))
         except FileNotFoundError:
             continue
-
-time.sleep(0.1)
