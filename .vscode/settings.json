@@ -3,5 +3,8 @@
     "python.analysis.diagnosticSeverityOverrides": {
         "reportMissingTypeStubs": "none",
         "reportUnknownMemberType": "none"
+    },
+    "[python]": {
+        "editor.glyphMargin": true
     }
 }
