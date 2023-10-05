@@ -3,6 +3,7 @@ import subprocess
 import os
 import re
 
+
 def format_path(p: str) -> str:
     path: str = ""
     p = re.sub('"|^-', "", p)
@@ -23,6 +24,8 @@ def format_path(p: str) -> str:
 
 def open_path(path_formatted: str) -> None:
     path_suffix: str = os.path.splitext(path_formatted)[1]
+    if "-->" in path_suffix:
+        return
     if "xls" in path_suffix:
         cmd: str = (
             r'"C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE" /x {}'.format(
