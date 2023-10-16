@@ -1,11 +1,11 @@
 {
-    "python.formatting.provider": "black",
     "python.analysis.diagnosticSeverityOverrides": {
         "reportMissingTypeStubs": "none",
         "reportUnknownMemberType": "none"
     },
     "[python]": {
-        "editor.glyphMargin": true
+        "editor.glyphMargin": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "python.analysis.autoImportCompletions": true
 }
