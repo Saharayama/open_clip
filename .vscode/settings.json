@@ -6,5 +6,6 @@
     },
     "[python]": {
         "editor.glyphMargin": true
-    }
+    },
+    "python.analysis.autoImportCompletions": true
 }
