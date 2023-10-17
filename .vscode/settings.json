@@ -1,11 +1,6 @@
 {
     "python.analysis.diagnosticSeverityOverrides": {
-        "reportMissingTypeStubs": "none",
-        "reportUnknownMemberType": "none"
-    },
-    "[python]": {
-        "editor.glyphMargin": true,
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "reportMissingTypeStubs": "none"
     },
     "python.analysis.autoImportCompletions": true
 }

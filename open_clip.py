@@ -1,7 +1,8 @@
-import pyperclip
-import subprocess
 import os
 import re
+import subprocess
+
+import pyperclip
 
 
 def format_path(p: str) -> str:
