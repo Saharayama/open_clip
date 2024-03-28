@@ -32,7 +32,7 @@ def open_path(path_formatted: str) -> None:
     office_path: str = r"C:\Program Files\Microsoft Office\root\Office16"
     cmd: str | None = None
 
-    if "xls" in path_suffix:
+    if "xl" in path_suffix:
         cmd = rf'"{office_path}\EXCEL.EXE" /x {path_formatted}'
     elif "doc" in path_suffix:
         cmd = rf'"{office_path}\WINWORD.EXE" /w {path_formatted}'
