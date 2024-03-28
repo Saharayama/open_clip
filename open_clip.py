@@ -7,7 +7,7 @@ import pyperclip
 
 def format_path(p: str) -> str:
     path: str = ""
-    p = re.sub(r'"|^ *-|^\t*-', "", p).strip()
+    p = re.sub(r'"|^ *-|^\t*-|<|>', "", p).strip()
 
     if ":" in p and "/" in p:
         path = p.replace("/", "\\")
