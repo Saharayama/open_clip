@@ -26,7 +26,7 @@ def format_path(p: str) -> str:
 
 def open_path(path_formatted: str) -> None:
     path_suffix: str = os.path.splitext(path_formatted)[1]
-    if "-->" in path_suffix:
+    if "--" in path_suffix:
         return
 
     office_path: str = r"C:\Program Files\Microsoft Office\root\Office16"
