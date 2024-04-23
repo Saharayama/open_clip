@@ -39,7 +39,7 @@ def open_path(path_formatted: str) -> None:
 
     if cmd is None:
         os.startfile(path_formatted)
-    else:
+    elif os.path.exists(path_formatted.strip('"')):
         subprocess.Popen(cmd)
 
 
